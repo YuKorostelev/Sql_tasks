@@ -104,8 +104,8 @@ from count_products_by_makers
 
 --task8 (lesson4)
 -- Компьютерная фирма: Сделать копию таблицы printer (название printer_updated) и удалить из нее все принтеры производителя 'D'
-create table printer_updated as
-select pr.model, pr.code, pr.color, pr.type, pr.price, p.maker
+create  table printer_updated as
+select pr.model, pr.code, pr.color, pr.type, pr.price
 from printer pr
 join product p 
 on pr.model = p.model
@@ -116,11 +116,17 @@ from printer_updated
 delete from printer_updated
 where maker = 'D'
 
+
 --task9 (lesson4)
 -- Компьютерная фирма: Сделать на базе таблицы (printer_updated) view с дополнительной колонкой производителя (название printer_updated_with_makers)
 
+
+
 --task10 (lesson4)
 -- Корабли: Сделать view c количеством потопленных кораблей и классом корабля (название sunk_ships_by_classes). Во view: count, class (если значения класса нет/IS NULL, то заменить на 0)
+
+
+
 
 --task11 (lesson4)
 -- Корабли: По предыдущему view (sunk_ships_by_classes) сделать график в colab (X: class, Y: count)
@@ -212,6 +218,3 @@ where ship in
 (select name
 from ships
 where class = 'kongo')
-
-
-
