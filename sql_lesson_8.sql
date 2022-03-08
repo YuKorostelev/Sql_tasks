@@ -32,7 +32,6 @@ where first_name = 'Anna'
 --task6  (lesson8)
 -- https://sql-academy.org/ru/trainer/tasks/38
 
-
 select count(*) as Count
 from student 
 where first_name = 'Anna'
