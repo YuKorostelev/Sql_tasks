@@ -89,3 +89,7 @@ ORDER BY Teacher.last_name
 
 --task15  (lesson8)
 -- https://sql-academy.org/ru/trainer/tasks/63
+
+select CONCAT(last_name,'.', LEFT(first_name,1),'.', LEFT(middle_name,1), '.') as name
+from Student
+ORDER BY last_name, first_name
