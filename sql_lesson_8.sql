@@ -43,7 +43,7 @@ where first_name = 'Anna'
 SELECT FLOOR(avg(YEAR(CURRENT_DATE) - YEAR(birthday))) AS age
 FROM FamilyMembers
 
-Íè FLOOR, íè ceil íå ïîäîøëè
+Ни FLOOR, ни ceil не подходит
 
 
 --task8  (lesson8)
