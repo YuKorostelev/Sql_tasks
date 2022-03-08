@@ -43,7 +43,7 @@ where first_name = 'Anna'
 SELECT FLOOR(avg(YEAR(CURRENT_DATE) - YEAR(birthday))) AS age
 FROM FamilyMembers
 
-Ни FLOOR, ни ceil не подошли
+ГЌГЁ FLOOR, Г­ГЁ ceil Г­ГҐ ГЇГ®Г¤Г®ГёГ«ГЁ
 
 
 --task8  (lesson8)
@@ -77,6 +77,15 @@ where class.name like '10%'
 
 --task14  (lesson8)
 -- https://sql-academy.org/ru/trainer/tasks/43
+
+SELECT last_name
+from Teacher
+join Schedule
+on Schedule.teacher = Teacher.id
+JOIN Subject
+on Schedule.subject = Subject.id
+where Subject.name = 'Physical culture'
+ORDER BY Teacher.last_name
 
 --task15  (lesson8)
 -- https://sql-academy.org/ru/trainer/tasks/63
