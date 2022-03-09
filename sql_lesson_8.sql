@@ -29,6 +29,9 @@ where first_name = 'Anna'
 --task5  (lesson8)
 -- https://sql-academy.org/ru/trainer/tasks/35
 
+select COUNT(classroom) as count 
+from Schedule
+where date like '2019-09-02%'
 --task6  (lesson8)
 -- https://sql-academy.org/ru/trainer/tasks/38
 
