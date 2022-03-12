@@ -48,6 +48,10 @@ order by rn;
 
 --task7  (lesson9)
 -- oracle: https://www.hackerrank.com/challenges/salary-of-employees/problem
+SELECT name 
+FROM Employee 
+WHERE salary > 2000 AND months < 10 
+ORDER BY employee_id;
 
 --task8  (lesson9)
 -- oracle: https://www.hackerrank.com/challenges/the-report/problem
