@@ -45,9 +45,6 @@ where first_name = 'Anna'
 SELECT FLOOR(avg(YEAR(CURRENT_DATE) - YEAR(birthday))) AS age
 FROM FamilyMembers
 
-Ни FLOOR, ни ceil не подходит
-
-
 --task8  (lesson8)
 -- https://sql-academy.org/ru/trainer/tasks/27
 
@@ -70,6 +67,17 @@ where class.name like '10%'
 
 --task11 (lesson8)
 -- https://sql-academy.org/ru/trainer/tasks/20
+SELECT status,
+         member_name,
+        (amount * unit_price) AS costs
+FROM FamilyMembers
+INNER JOIN Payments
+    ON Payments.family_member=FamilyMembers.member_id
+INNER JOIN Goods
+    ON Payments.good=Goods.good_id
+INNER JOIN GoodTypes
+    ON GoodTypes.good_type_id=Goods.type
+WHERE good_type_name="entertainment"
 
 --task12  (lesson8)
 -- https://sql-academy.org/ru/trainer/tasks/55
