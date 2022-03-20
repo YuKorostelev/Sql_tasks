@@ -1,6 +1,17 @@
 --task1  (lesson8)
 -- oracle: https://leetcode.com/problems/department-top-three-salaries/
 
+SELECT d.Name as Department,
+e.Name as Employee,
+e.Salary as Salary
+FROM Department d, Employee e
+WHERE(
+    SELECT COUNT(distinct Salary)
+    FROM Employee
+    WHERE Salary > e.Salary AND DepartmentId = d.Id
+) < 3 AND e.DepartmentId = d.Id
+ORDER BY d.Id, e.Salary desc;
+
 --task2  (lesson8)
 -- https://sql-academy.org/ru/trainer/tasks/17
 
